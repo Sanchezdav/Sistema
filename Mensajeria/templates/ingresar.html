@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Login{% endblock %}
+
+{% block encabezado %}<h1><a href="/">Mensajeria</a></h1>{% endblock %}
+
+{% block contenido %}
+		<h2 id="entrar">Entrar</h2>
+		<div id="ingresar">
+			<form class="sign-up" method="POST">{% csrf_token %}
+				<h1 class="sign-up-title">Login</h1>
+			    <input type="text" name="username" class="sign-up-input" placeholder="Usuario" autofocus>
+			    <input type="password" name="password" class="sign-up-input" placeholder="Password">
+			    <input type="submit" value="Ingresar" class="sign-up-button">
+			</form>
+		</div>
+{% endblock %}

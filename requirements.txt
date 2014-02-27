@@ -1,0 +1,7 @@
+Django==1.5.4
+Unipath==1.0
+django-admin-bootstrapped==0.4.3
+django-report-builder==1.14
+openpyxl==1.8.3
+python-dateutil==2.2
+six==1.5.2

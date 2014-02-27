@@ -1,0 +1,21 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ title }} | {% trans 'Mensajeria' %}{% endblock %}
+
+{% block branding %}
+   <h1 id="site-name">{% trans 'Mensajeria' %}</h1>
+{% endblock %}
+
+{% block nav-global %}
+	{% if user.is_staff %}
+    <style type="text/css">
+        .ml {margin:0 5px;display:inline-block; color: gray; font-weight: bold; font-size: 1.5em; padding: 0}
+        .ml:hover{color: white; text-decoration: none;}
+    </style>
+
+    <a href="/admin/" class="ml">Inicio</a>
+    <a href="/" class="ml">Apicacion</a>  
+    {% endif %}
+{% endblock %}
+

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Mensajeria{% endblock %}
+
+{% block encabezado %}<h1><a href="/">Mensajeria</a></h1>{% endblock %}
+
+{% block contenido %}
+	<h2>Finaliza los Servicios Pendientes</h2>
+	{% if user.is_authenticated %}
+		<div class="bienvenido">
+			<span><em>Bienvenido <strong>{{user.username|capfirst}}</strong></em></span><br>
+			<a href="/salir/">Salir</a>
+		</div>
+		<div id="cont-admin">
+			<a href="/admin/" id="admin" target="_blank">Administrador</a>
+		</div>
+		<div class = "datagrid">
+				<table>
+					<thead><tr><th>Servicio</th><th>Solicitante</th><th>Notificador</th><th>Fecha y Hora de Inicio</th><th>Sitio</th><th>Actividad</th><th>Comentarios</th><th>Enterado</th><th>Finalizar</th></tr></thead>
+
+					<tfoot><tr><td colspan="9">
+					<div id="paging">
+						<ul>
+							{% if servicios.has_previous %}
+								<li><a href="?page={{ servicios.previous_page_number }}"><span>Anterior</span></a></li>
+							{% endif %}
+							<li><span class="active">Página {{ servicios.number }} de {{ servicios.paginator.num_pages }}.</span></li>
+							{% if servicios.has_next %}
+								<li><a href="?page={{ servicios.next_page_number }}"><span>Siguiente</span></a></li>
+							{% endif %}
+						</ul>
+					</div></td></tr></tfoot>
+					<tbody>
+						{% if servicios %}
+							{% for item in servicios %}
+								{% if item.fechaFin == Null %}
+									<tr>
+										<td>{{item}}</td>
+										<td>{{item.solicitante|capfirst}}</td>
+										<td>{{item.notificador}}</td>
+										<td>{{item.fechaInicio}}</td>
+										<td>{{item.sitio}}</td>
+										<td>{{item.actividad}}</td>
+										<td>{{item.comentarios}}</td>
+										{% if item.fechaEnterado %}
+											<td><p>Servicio en proceso</p></td>
+											<td><a href="/finalizar/{{item.id}}" role="button" onclick="return confirm('Esta seguro de finalizar el servicio?')">Finalizar</a></td></tr>
+										{% else %}
+											<td><p>El notificador {{item.notificador}} no se ha enterado</p></td>
+											<td><p>No puede finalizar</p></td></tr>
+										{% endif %}
+								{% elif forloop.last %}
+									<span>No hay servicios pendientes</span>
+								{% endif %}
+							{% endfor %}
+						{% else %}
+							<td colspan="7"><span class="aviso">No hay servicios en proceso</span></td>
+						{% endif %}
+					</tbody>
+				</table>
+			</div>
+	{% endif %}
+	<div id="refrescar">
+		<button onclick="refrescar();">Refrescar Pagina</button>
+	</div>
+	<div id="contenedor-botones">
+			<a href="/servicios/" class="boton">Regresar</a><br>
+			<a href="/salir/" class="boton">Salir</a>
+	</div>
+{% endblock %}

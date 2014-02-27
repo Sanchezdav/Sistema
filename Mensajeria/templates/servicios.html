@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Servicios{% endblock %}
+
+{% block encabezado %}<h1><a href="/">Mensajeria</a></h1>{% endblock %}
+
+{% block contenido %}
+	{% if user.is_authenticated %}
+		<h2>Da de alta un servicio</h2>
+		<div class="bienvenido">
+			<span><em>Bienvenido <strong>{{user.username|capfirst}}</strong></em></span><br>
+			<a href="/salir/">Salir</a>
+		</div>
+		<div id="cont-admin">
+			<a href="/admin/" id="admin" target="_blank">Administrador</a>
+		</div>
+		<div id="formservicios">
+			<form id="formulario" method="POST" >
+				{% csrf_token %}
+				{{form.as_p}}
+				<input id="aceptar" class="registrar" type="submit" value="Aceptar" onclick="return confirm('Esta seguro de enviar el servicio?')" />
+			</form>
+			<a href="/finalizar/" id="pendientes">Servicios Pendientes</a><br>
+		</div>
+	{% endif %}
+
+
+{% endblock %}

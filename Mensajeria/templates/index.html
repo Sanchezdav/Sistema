@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Mensajeria{% endblock %}
+
+{% block encabezado %}<h1><a href="/">Mensajeria</a></h1>{% endblock %}
+
+{% block contenido %}
+<script>setTimeout(function(){window.location.reload()},60000)</script>
+	<h2>Servicios en Curso</h2>
+	{% if user.is_authenticated %}
+		<div class="bienvenido">
+			<span><em>Bienvenido <strong>{{user.username|capfirst}}</strong></em></span><br>
+			<a href="/salir/">Salir</a>
+		</div>
+		<div id="cont-admin">
+			<a href="/admin/" id="admin" target="_blank">Administrador</a>
+		</div>
+	{% endif %}
+	<div class = "datagrid" id="datagrid1">
+		<table  border="1">
+			<thead><tr><th>Servicio</th><th>Solicitante</th><th>Notificador</th><th>Fecha y Hora de Inicio</th><th>Sitio</th><th>Actividad</th><th>Comentarios</th><th>Enterado</th></tr></thead>
+
+			<tfoot><tr><td colspan="8">
+			<div id="paging">
+				<ul>
+					{% if servicios.has_previous %}
+						<li><a href="?page={{ servicios.previous_page_number }}"><span>Anterior</span></a></li>
+					{% endif %}
+					<li><span class="active">Página {{ servicios.number }} de {{ servicios.paginator.num_pages }}.</span></li>
+					{% if servicios.has_next %}
+						<li><a href="?page={{ servicios.next_page_number }}"><span>Siguiente</span></a></li>
+					{% endif %}
+				</ul>
+			</div></td></tr></tfoot>
+			<tbody>
+				{% if servicios %}
+					{% for item in servicios %}
+							<tr>
+								<td>{{ forloop.counter }}</td>
+								<td>{{ item.solicitante|capfirst }}</td>
+								<td>{{ item.notificador }}</td>
+								<td>{{ item.fechaInicio }}</td>
+								<td>{{ item.sitio }}</td>
+								<td>{{ item.actividad }}</td>
+								<td>{{ item.comentarios }}</td>
+							{% if user.is_authenticated == False %}	
+								{% if item.fechaEnterado == Null %}
+									<td><a href="enterado/{{item.id}}">Enterado</a></td></tr>
+								{% else %}
+									<td><p class="proceso">En proceso</p></td></tr>
+								{% endif %}
+							{% else %}
+								{% if item.fechaEnterado != Null %}
+									<td><p class="proceso">En proceso</p></td></tr>
+								{% endif %}
+							{% endif %}
+
+					{% endfor %}
+				{% else %}
+						<td colspan="7"><span class="aviso">No hay servicios en proceso</span></td>
+				{% endif %}
+			</tbody>
+		</table>
+	</div>
+	<div id="refrescar">
+		<button onclick="refrescar();">Refrescar Pagina</button>
+	</div>
+{% endblock %}

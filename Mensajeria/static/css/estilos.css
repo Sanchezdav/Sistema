@@ -1,0 +1,783 @@
+.not(#formservicios)
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	font-family: Helvetica;
+	font-size: 1em;
+}
+
+button
+{
+	background: green;
+	border: 2px solid black;
+	border-radius: 4px;
+	color: white;
+	font-size: 1em;
+	font-weight: bold;
+	margin: .5em;
+	padding: .5em .4em;
+
+	-webkit-box-shadow: black 2px 2px;
+	-moz-box-shadow: black 2px 2px;
+	-ms-box-shadow: black 2px 2px;
+	-o-box-shadow: black 2px 2px;
+	box-shadow: black 2px 2px;
+
+	-webkit-transition: all 0.2s ease;
+	   -moz-transition: all 0.2s ease;
+	    -ms-transition: all 0.2s ease;
+	     -o-transition: all 0.2s ease;
+	        transition: all 0.2s ease;
+}
+
+button:hover
+{
+	cursor: pointer;
+	background: black;
+	border: 2px solid green;
+	border-radius: 4px;
+
+	-webkit-transform: scale(1.1);
+	   -moz-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	     -o-transform: scale(1.1);
+	        transform: scale(1.1);
+
+	-webkit-box-shadow: green 2px 2px;
+	-moz-box-shadow: green 2px 2px;
+	-ms-box-shadow: green 2px 2px;
+	-o-box-shadow: green 2px 2px;
+	box-shadow: green 2px 2px;
+	
+}
+
+footer
+{
+	background: green;
+	border: 2px solid black;
+	border-radius: 5px;
+	color: white;
+	margin: 1em auto;
+	padding: .4em;
+	width: 95%;
+}
+
+header
+{
+	background: green;
+	border: 2px solid black;
+	border-radius: 5px;
+	color: white;
+	margin: 1em auto;
+	padding: .4em;
+	width: 95%;
+}
+
+header h1
+{
+	display: inline-block;
+	font-family: 'Oleo Script Swash Caps', Helvetica, Arial, cursive;
+	font-size: 4.5em;
+	margin: .3em;
+	padding: .1em;
+	text-align: center;
+	width: 30%;
+}
+
+header h1 a
+{
+	color: white;
+	text-decoration: none;
+
+	-webkit-transition: all 0.2s ease-in;
+	   -moz-transition: all 0.2s ease-in;
+	    -ms-transition: all 0.2s ease-in;
+	     -o-transition: all 0.2s ease-in;
+	        transition: all 0.2s ease-in;
+
+}
+
+header h1 a:hover
+{
+	color: lime;
+}
+
+#admin
+{
+	background: green;
+	border: 1px solid black;
+	border-radius: 3px;
+	color: white;
+	font-weight: bold;
+	margin: .5em;
+	padding: .3em;
+	text-decoration: none;
+
+	-webkit-box-shadow: black 1px 1px;
+	-moz-box-shadow: black 1px 1px;
+	-ms-box-shadow: black 1px 1px;
+	-o-box-shadow: black 1px 1px;
+	box-shadow: black 1px 1px;
+
+	-webkit-transition: all 0.5s ease;
+	   -moz-transition: all 0.5s ease;
+	    -ms-transition: all 0.5s ease;
+	     -o-transition: all 0.5s ease;
+	        transition: all 0.5s ease;
+}
+
+#admin:hover
+{
+	color: lime;
+}
+
+#cont-admin
+{
+	margin: .3em;
+	padding: .5em;
+	text-align: right;
+}
+
+#contenedor-botones
+{
+	display: inline-block;
+	margin: 1em auto;
+	padding: .1em;
+	text-align: right;
+	width: 45%;
+}
+
+#copyright
+{
+	display: inline-block;
+	margin: .1em;
+	padding: .1em;
+	vertical-align: top;
+	width: 45%;
+}
+
+#copyright span
+{
+	font-size: .9em;
+	padding: 1em;
+}
+
+#entrar
+{
+	margin: .2em auto;
+	text-align: center;
+	width: 97%;
+}
+
+#formulario
+{
+	display: inline-block;
+	margin: .2em;
+	padding: .2em;
+	width: 75%;
+}
+
+#formservicios 
+{
+	background: aliceblue;
+	border: 2px solid green;
+	border-radius: 7px;
+	margin: .6em auto;
+	padding: .7em;
+	width: 97%;
+
+	-webkit-box-shadow: rgba(0,0,0,0.5) 5px 5px 30px;
+	-moz-box-shadow: rgba(0,0,0,0.5) 5px 5px 30px;
+	-ms-box-shadow: rgba(0,0,0,0.5) 5px 5px 30px;
+	-o-box-shadow: rgba(0,0,0,0.5) 5px 5px 30px;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 30px;
+
+}
+
+#logo
+{
+	display: inline-block;
+	margin: .1em;
+	padding: .1em;
+	text-align: right;
+	width: 45%;
+}
+
+#menu
+{
+	display: inline-block;
+	margin: 1em 1em 1em 1.5em;
+	padding: 0;
+	text-align: left;
+	width: 60%;
+}
+
+#menu a
+{
+	background: white;
+	border: solid 2px black;
+	border-radius: .5em;
+	color: black;
+	display: inline-block;
+	font-size: 2em;
+	margin: .5em 1em;
+	padding: .5em .6em;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+
+	-webkit-transition: all 0.3s ease;
+	   -moz-transition: all 0.3s ease;
+	    -ms-transition: all 0.3s ease;
+	     -o-transition: all 0.3s ease;
+	        transition: all 0.3s ease;
+}
+
+#menu a:hover
+{
+	background: black;
+	border: solid 2px white;
+	color: white;
+
+	-webkit-transform: scale(1.2) rotate(5deg);
+	   -moz-transform: scale(1.2) rotate(5deg);
+	    -ms-transform: scale(1.2) rotate(5deg);
+	     -o-transform: scale(1.2) rotate(5deg);
+	        transform: scale(1.2) rotate(5deg);
+}
+
+
+#menu li
+{
+	list-style: none;
+	width: 6em;
+}
+
+#pendientes
+{
+	background: green;
+	border: 2px solid black;
+	border-radius: 4px;
+	color: white;
+	display: inline-block;
+	margin: .2em;
+	padding: .4em .1em;
+	text-align: center;
+	text-decoration: none;
+	width: 15%;
+
+	-webkit-transition: all 0.2s ease;
+	   -moz-transition: all 0.2s ease;
+	    -ms-transition: all 0.2s ease;
+	     -o-transition: all 0.2s ease;
+	        transition: all 0.2s ease;
+
+	-webkit-box-shadow: black 2px 2px;
+	-moz-box-shadow: black 2px 2px;
+	-ms-box-shadow: black 2px 2px;
+	-o-box-shadow: black 2px 2px;
+	box-shadow: black 2px 2px;
+}
+
+#pendientes:hover
+{
+	background: black;
+	border: 2px solid green;
+	border-radius: 4px;
+
+	-webkit-transform: scale(1.1);
+	   -moz-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	     -o-transform: scale(1.1);
+	        transform: scale(1.1);
+
+	-webkit-box-shadow: green 2px 2px;
+	-moz-box-shadow: green 2px 2px;
+	-ms-box-shadow: green 2px 2px;
+	-o-box-shadow: green 2px 2px;
+	box-shadow: green 2px 2px;
+}
+
+#refrescar
+{
+	display: inline-block;
+	margin: 1em auto;
+	padding: .5em;
+	text-align: left;
+	width: 45%;
+}
+
+.aviso
+{
+	font-size: 2em;
+	font-weight: bold;
+	margin: .5em;
+	padding: .5em;
+}
+
+.bienvenido
+{
+	display: inline-block;
+	margin: 1em 1em 1em 5.5em;
+	padding: .5em;
+	text-align: right;
+	width: 32%;
+}
+
+.bienvenido span
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+}
+
+.bienvenido a
+{
+	background: green;
+	border: 1px solid black;
+	border-radius: 2px;
+	color: white;
+	display: inline-block;
+	font-weight: bold;
+	margin-top: .1em;
+	padding: .1em;
+	text-align: center;
+	text-decoration: none;
+	width: 20%;
+
+	-webkit-box-shadow: black 2px 2px;
+	-moz-box-shadow: black 2px 2px;
+	-ms-box-shadow: black 2px 2px;
+	-o-box-shadow: black 2px 2px;
+	box-shadow: black 2px 2px;
+}
+
+.bienvenido a:hover
+{
+	background: black;
+	border: 1px solid green;
+	border-radius: 2px;
+
+	-webkit-box-shadow: green 2px 2px;
+	-moz-box-shadow: green 2px 2px;
+	-ms-box-shadow: green 2px 2px;
+	-o-box-shadow: green 2px 2px;
+	box-shadow: green 2px 2px;
+}
+
+.boton
+{
+	background: green;
+	border: 2px solid black;
+	border-radius: 3px;
+	color: white;
+	display: inline-block;
+	margin: .5em;
+	padding: .4em .3em;
+	text-align: center;
+	text-decoration: none;
+	width: 15%;
+
+	-webkit-transition: all 0.2s ease;
+	   -moz-transition: all 0.2s ease;
+	    -ms-transition: all 0.2s ease;
+	     -o-transition: all 0.2s ease;
+	        transition: all 0.2s ease;
+
+	-webkit-box-shadow: black 2px 2px;
+	-moz-box-shadow: black 2px 2px;
+	-ms-box-shadow: black 2px 2px;
+	-o-box-shadow: black 2px 2px;
+	box-shadow: black 2px 2px;
+}
+
+.boton:hover
+{
+	background: black;
+	border: 2px solid green;
+	border-radius: 3px;
+
+	-webkit-transform: scale(1.1);
+	   -moz-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	     -o-transform: scale(1.1);
+	        transform: scale(1.1);
+
+	-webkit-box-shadow: green 2px 2px;
+	-moz-box-shadow: green 2px 2px;
+	-ms-box-shadow: green 2px 2px;
+	-o-box-shadow: green 2px 2px;
+	box-shadow: green 2px 2px;
+}
+
+.contenido
+{
+	height: 41em;
+	margin: .2em auto;
+	padding: .1em;
+	width: 97%;
+}
+
+.contenido h2
+{
+	color: green;
+	display: inline-block;
+	font-family: 'Oleo Script Swash Caps', Helvetica, Arial,cursive;
+	font-size: 3em;
+	padding: .4em;
+	margin: .2em;
+	vertical-align: top;
+	width: 50%;
+}
+
+/* ---------------------Login--------------------------------*/
+
+.sign-up {
+  position: relative;
+  margin: 30px auto;
+  width: 280px;
+  padding: 33px 25px 29px;
+  background: green;
+  border-bottom: 1px solid #c4c4c4;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+.sign-up:before, .sign-up:after {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: inherit;
+  border-bottom: 1px solid #d2d2d2;
+  border-radius: 4px;
+}
+.sign-up:after {
+  bottom: 3px;
+  border-color: #dcdcdc;
+}
+
+.sign-up-title {
+  margin: -25px -25px 25px;
+  padding: 15px 25px;
+  line-height: 35px;
+  font-size: 26px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.75);
+  background: white;
+}
+.sign-up-title:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: #c4e17f;
+  border-radius: 5px 5px 0 0;
+}
+
+input {
+  font-family: inherit;
+  color: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.sign-up-input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 25px;
+  padding: 0 15px 2px;
+  font-size: 17px;
+  background: white;
+  border: 2px solid #ebebeb;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 -2px #ebebeb;
+  box-shadow: inset 0 -2px #ebebeb;
+}
+.sign-up-input:focus {
+  border-color: #62c2e4;
+  outline: none;
+  -webkit-box-shadow: inset 0 -2px #62c2e4;
+  box-shadow: inset 0 -2px #62c2e4;
+}
+.lt-ie9 .sign-up-input {
+  line-height: 48px;
+}
+
+.sign-up-button {
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  height: 54px;
+  padding: 0;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #f0776c;
+  border: 0;
+  border-bottom: 2px solid #d76b60;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #d76b60;
+  box-shadow: inset 0 -2px #d76b60;
+}
+.sign-up-button:active{
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+
+
+:-moz-placeholder {
+  color: #ccc;
+  font-weight: 300;
+}
+
+::-moz-placeholder {
+  color: #ccc;
+  opacity: 1;
+  font-weight: 300;
+}
+
+::-webkit-input-placeholder {
+  color: #ccc;
+  font-weight: 300;
+}
+
+:-ms-input-placeholder {
+  color: #ccc;
+  font-weight: 300;
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/*--------------------------------End Login----------------------------------*/
+@media screen and (max-width: 1200px)
+{
+	header h1
+	{
+		display: block;
+		font-size: 4.5em;
+		margin: .3em auto;
+		text-align: center;
+		width: 60%;
+	}
+
+	#menu
+	{
+		display: block;
+		text-align: center;
+		width: 95%;
+	}
+
+	#menu a
+	{
+		font-size: 2em;
+		margin: .5em 1em;
+		padding: .5em 1em;
+		text-align: center;
+	}
+
+	.bienvenido
+	{
+		display: inline-block;
+		margin-top: .1em;
+		padding: .1em;
+		text-align: right;
+		vertical-align: top;
+		width: 40%;	
+	}
+
+	.bienvenido a
+	{
+		display: inline-block;
+		width: 20%;
+	}
+
+	.bienvenido span
+	{
+		display: inline-block;
+		width: 100%;
+	}
+
+	.contenido h2
+	{
+		display: inline-block;
+		font-size: 3em;
+		padding: .4em;
+		margin: .2em auto;
+		vertical-align: top;
+		width: 40%;
+	}
+}
+
+@media screen and (max-width: 980px)
+{
+	.contenido h2
+	{
+		display: inline-block;
+		font-size: 2.5em;
+		padding: .4em;
+		margin: .2em auto;
+		vertical-align: top;
+		width: 40%;
+	}
+}
+
+@media screen and (max-width: 800px)
+{
+	header h1
+	{
+		display: block;
+		font-size: 4em;
+		margin: .3em auto;
+		text-align: center;
+		width: 60%;
+	}
+
+	#copyright span
+	{
+		font-size: .8em;
+	}
+
+	#menu
+	{
+		display: block;
+		text-align: center;
+		width: 95%;
+	}
+
+	#menu a
+	{
+		font-size: 1.5em;
+		margin: .5em 1em;
+		padding: .5em .8em;
+		text-align: center;
+	}
+
+	.contenido h2
+	{
+		display: inline-block;
+		font-size: 2.2em;
+		padding: .4em;
+		margin: .2em auto;
+		vertical-align: top;
+		width: 40%;
+	}
+}
+
+@media screen and (max-width: 768px)
+{
+	header h1
+	{
+		display: block;
+		font-size: 4em;
+		margin: .3em auto;
+		text-align: center;
+		width: 60%;
+	}
+
+	#copyright span
+	{
+		font-size: .8em;
+	}
+
+	#menu
+	{
+		display: block;
+		text-align: center;
+		width: 95%;
+	}
+
+	#menu a
+	{
+		font-size: 1.5em;
+		margin: .5em 1em;
+		padding: .5em .6em;
+		text-align: center;
+	}
+
+	.bienvenido
+	{
+		display: inline-block;
+		margin-top: .1em;
+		padding: .1em;
+		text-align: right;
+		vertical-align: top;
+		width: 40%;	
+	}
+
+	.bienvenido a
+	{
+		display: inline-block;
+		width: 20%;
+	}
+
+	.bienvenido span
+	{
+		display: inline-block;
+		width: 100%;
+	}
+
+	.contenido h2
+	{
+		display: inline-block;
+		font-size: 2em;
+		padding: .4em;
+		margin: .2em auto;
+		vertical-align: top;
+		width: 40%;
+	}
+
+}
+
+@media screen and (max-width: 550px)
+{
+	header h1
+	{
+		display: block;
+		font-size: 4em;
+		margin: .3em auto;
+		text-align: center;
+		width: 60%;
+	}
+
+	.bienvenido
+	{
+		display: inline-block;
+		margin-top: .1em;
+		padding: .1em;
+		text-align: right;
+		vertical-align: top;
+		width: 30%;	
+	}
+
+	.bienvenido a
+	{
+		display: inline-block;
+		width: 20%;
+	}
+
+	.bienvenido span
+	{
+		display: inline-block;
+		width: 100%;
+	}
+
+}

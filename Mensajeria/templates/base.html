@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>{% block titulo %}{% endblock %}</title>
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/estilos.css" type="text/css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/tabla.css" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps' rel='stylesheet' type='text/css'>
+  <script src="{{ STATIC_URL }}js/jquery-1.10.2.min.js"></script>
+  <script type='text/javascript' src="{{ STATIC_URL }}js/script.js"></script>
+</head>
+<body>
+  <script type="text/javascript">
+    function refrescar()
+    {
+        location.reload(true);
+    }
+  </script>
+  <header>
+	{% block encabezado %}{% endblock %}
+  <nav id="menu">
+      <ul>
+        <a href="/"><li>Notificadores</li></a>
+        <a href="/servicios/"><li>Servicios</li></a>
+      </ul>
+  </nav>
+  </header>	
+	<hr>
+	<section class='contenido'>
+		{% block contenido %}{% endblock %}
+  </section>
+  <footer>
+  	<div id="copyright">
+      <span>Copyright &copy;</span><br><br>
+      <span>Diseñado para: <em><strong>Direccion de Politica Fiscal</strong></em></span><br><br>
+      <span>Diseñado por: <em><strong>Fausto David Sanchez Salazar</strong></em></span><br><br>
+      <span>Correo: <em><strong>sanchez.dav90@gmail.com</strong></em></span> 
+    </div>
+     <div id="logo">
+       <img src="{{ STATIC_URL }}img/logo1.png" alt="Gobierno del Estado de Mexico">
+     </div>
+  </footer>
+</body>
+</html>
