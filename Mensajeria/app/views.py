@@ -24,6 +24,19 @@ def listing(request):
         servicios = paginator.page(paginator.num_pages)
     return render_to_response('index.html', {"servicios": servicios}, context_instance=RequestContext(request))
 
+def listingTable(request):
+    lista_servicios = Servicio.objects.filter(fechaFin__isnull=True)
+    paginator = Paginator(lista_servicios, 8, orphans=3) 
+
+    page = request.GET.get('page')
+    try:
+        servicios = paginator.page(page)
+    except PageNotAnInteger:
+        servicios = paginator.page(1)
+    except EmptyPage:
+        servicios = paginator.page(paginator.num_pages)
+    return render_to_response('table.html', {"servicios": servicios}, context_instance=RequestContext(request))
+
 def listing2(request):
     solicitante1 = request.user
     lista_servicios = Servicio.objects.filter(fechaFin__isnull=True, solicitante = solicitante1)

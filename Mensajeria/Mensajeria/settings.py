@@ -8,7 +8,7 @@ RUTA_PROYECTO = Path(__file__).ancestor(2)
 
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    # ('David Sanchez', 'sanchez.dav90@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -137,7 +137,7 @@ INSTALLED_APPS = (
 )
 
 REPORT_BUILDER_GLOBAL_EXPORT = True
-REPORT_BUILDER_INCLUDE = ['Servicio', 'Usuario']
+REPORT_BUILDER_INCLUDE = ['servicio', 'usuario']
 
 from django.core.urlresolvers import reverse_lazy
 

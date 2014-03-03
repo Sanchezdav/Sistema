@@ -1,21 +1,18 @@
 $(document).ready(function(){
 
-   $('#aceptar').on('click', refresh);
+   $('#aceptar').on('clic',refrescar);
 
 });
 
-function refresh() {
-    $.ajax({
-        url: '{% url servicios %}',
-        success: function(data) {
-            $('#datagrid1').html(data);
-        }
-    });
-    setInterval("refresh()", 3000);
-}
 
-$(function(){
-    refresh();
-});
+function refrescar()
+{
+	setInterval(function(){
+   		$.ajax({
+		   	url: '/table',
+		   	success:function(data){
+		   		$('#datagrid1').html(data)
+		   	}
+		 });
+   },3e3);
 }
-
