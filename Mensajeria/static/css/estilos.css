@@ -93,6 +93,7 @@ header h1 a
 {
 	color: white;
 	text-decoration: none;
+	text-shadow: rgba(0,0,0,0.6) 5px 5px 20px;
 
 	-webkit-transition: all 0.2s ease-in;
 	   -moz-transition: all 0.2s ease-in;
@@ -111,7 +112,7 @@ header h1 a:hover
 {
 	background: green;
 	border: 1px solid black;
-	border-radius: 3px;
+	border-radius: 2px;
 	color: white;
 	font-weight: bold;
 	margin: .5em 3.5em;
@@ -219,6 +220,7 @@ header h1 a:hover
 
 #menu a
 {
+	box-shadow: rgba(0,0,0,0.6) 5px 5px 20px;
 	background: white;
 	border: solid 2px black;
 	border-radius: .5em;
@@ -251,6 +253,16 @@ header h1 a:hover
 	        transform: scale(1.2) rotate(5deg);
 }
 
+#menu a:active
+{
+	color: lime;
+
+	-webkit-transform: scale(1.1) rotate(5deg);
+	   -moz-transform: scale(1.1) rotate(5deg);
+	    -ms-transform: scale(1.1) rotate(5deg);
+	     -o-transform: scale(1.1) rotate(5deg);
+	        transform: scale(1.1) rotate(5deg);
+}
 
 #menu li
 {
