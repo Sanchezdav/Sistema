@@ -7,15 +7,6 @@
 {% block contenido %}
 <script>setTimeout(function(){window.location.reload()},60000)</script>
 	<h2>Servicios en Curso</h2>
-	{% if user.is_authenticated %}
-		<div class="bienvenido">
-			<span><em>Bienvenido <strong>{{user.username|capfirst}}</strong></em></span><br>
-			<a href="/salir/">Salir</a>
-		</div>
-		<div id="cont-admin">
-			<a href="/admin/" id="admin" target="_blank">Administrador</a>
-		</div>
-	{% endif %}
 	<div class = "datagrid" id="datagrid1">
 		<table  border="1">
 			<thead><tr><th>Servicio</th><th>Solicitante</th><th>Notificador</th><th>Fecha y Hora de Inicio</th><th>Sitio</th><th>Actividad</th><th>Comentarios</th><th>Enterado</th></tr></thead>
@@ -61,8 +52,5 @@
 				{% endif %}
 			</tbody>
 		</table>
-	</div>
-	<div id="refrescar">
-		<button onclick="refrescar();">Refrescar Pagina</button>
 	</div>
 {% endblock %}

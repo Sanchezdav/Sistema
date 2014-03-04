@@ -141,6 +141,9 @@ header h1 a:hover
 {
 	margin: .3em;
 	padding: .5em;
+	position: absolute;
+	top: 5em;
+	right: -3em;
 	text-align: right;
 }
 
@@ -337,6 +340,9 @@ header h1 a:hover
 	display: inline-block;
 	margin: 1em 1em 1em 5.5em;
 	padding: .5em;
+	position: absolute;
+	top: 0;
+	right: 0;
 	text-align: right;
 	width: 32%;
 }
@@ -432,6 +438,7 @@ header h1 a:hover
 	height: 41em;
 	margin: .2em auto;
 	padding: .1em;
+	position: relative;
 	width: 97%;
 }
 

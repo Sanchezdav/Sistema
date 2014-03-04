@@ -7,13 +7,6 @@
 {% block contenido %}
 	{% if user.is_authenticated %}
 		<h2>Da de alta un servicio</h2>
-		<div class="bienvenido">
-			<span><em>Bienvenido <strong>{{user.username|capfirst}}</strong></em></span><br>
-			<a href="/salir/">Salir</a>
-		</div>
-		<div id="cont-admin">
-			<a href="/admin/" id="admin" target="_blank">Administrador</a>
-		</div>
 		<div id="formservicios">
 			<form id="formulario" method="POST" >
 				{% csrf_token %}

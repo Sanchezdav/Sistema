@@ -7,13 +7,6 @@
 {% block contenido %}
 	<h2>Finaliza los Servicios Pendientes</h2>
 	{% if user.is_authenticated %}
-		<div class="bienvenido">
-			<span><em>Bienvenido <strong>{{user.username|capfirst}}</strong></em></span><br>
-			<a href="/salir/">Salir</a>
-		</div>
-		<div id="cont-admin">
-			<a href="/admin/" id="admin" target="_blank">Administrador</a>
-		</div>
 		<div class = "datagrid">
 				<table>
 					<thead><tr><th>Servicio</th><th>Solicitante</th><th>Notificador</th><th>Fecha y Hora de Inicio</th><th>Sitio</th><th>Actividad</th><th>Comentarios</th><th>Enterado</th><th>Finalizar</th></tr></thead>
@@ -60,11 +53,4 @@
 				</table>
 			</div>
 	{% endif %}
-	<div id="refrescar">
-		<button onclick="refrescar();">Refrescar Pagina</button>
-	</div>
-	<div id="contenedor-botones">
-			<a href="/servicios/" class="boton">Regresar</a><br>
-			<a href="/salir/" class="boton">Salir</a>
-	</div>
 {% endblock %}

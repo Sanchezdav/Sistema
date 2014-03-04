@@ -11,12 +11,6 @@
   <script type='text/javascript' src="{{ STATIC_URL }}js/script.js"></script>
 </head>
 <body>
-  <script type="text/javascript">
-    function refrescar()
-    {
-        location.reload(true);
-    }
-  </script>
   <header>
 	{% block encabezado %}{% endblock %}
   <nav id="menu">
@@ -28,6 +22,15 @@
   </header>	
 	<hr>
 	<section class='contenido'>
+    {% if user.is_authenticated %}
+      <div class="bienvenido">
+        <span><em>Bienvenido <strong>{{user.username|capfirst}}</strong></em></span><br>
+        <a href="/salir/">Salir</a>
+      </div>
+      <div id="cont-admin">
+        <a href="/admin/" id="admin" target="_blank">Administrador</a>
+      </div>
+  {% endif %}
 		{% block contenido %}{% endblock %}
   </section>
   <footer>
