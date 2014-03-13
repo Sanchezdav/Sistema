@@ -2,21 +2,19 @@ $(document).ready(function () {
 
     $("#aceptar").click(function () {
         SimpleNotification.notify({
-            icon: 'http://code.vikaskbh.com/javascript-logo-small.png',
+            icon: 'http://saludsrh.edomex.gob.mx/bt/bolsa_de_trabajo/images/PiensaGrande.png',
             title: 'Nuevo Servicio',
             description: 'Tienes un nuevo servicio por favor verifica'
         }).onClickOpen("http://10.33.168.1:8000").show();
     });
-
-});
-
-SimpleNotification = window.SimpleNotification || {};
+	
+	SimpleNotification = window.SimpleNotification || {};
 SimpleNotification = (function () {
     var notification;
     var permitted = window.webkitNotifications.checkPermission() == 0 ? true : false;
 
     var defaults = {
-        icon: 'http://code.vikaskbh.com/javascript-logo-small.png',
+        icon: 'http://saludsrh.edomex.gob.mx/bt/bolsa_de_trabajo/images/PiensaGrande.png',
         title: 'Nuevo Servicio',
         description: 'Tienes un nuevo servicio por favor verifica'
     }
@@ -54,3 +52,5 @@ SimpleNotification = (function () {
     }
 
 })();
+
+});
