@@ -11,7 +11,7 @@
 			<form id="formulario" method="POST" >
 				{% csrf_token %}
 				{{form.as_p}}
-				<input id="aceptar" class="registrar" type="submit" value="Aceptar" onclick="return confirm('Esta seguro de enviar el servicio?')" />
+				<input id="aceptar" class="registrar" type="submit" value="Aceptar" role="button" onclick="return confirm('Esta seguro de enviar el servicio?')" />
 			</form>
 			<a href="/finalizar/" id="pendientes">Servicios Pendientes</a><br>
 		</div>

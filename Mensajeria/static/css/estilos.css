@@ -1,4 +1,3 @@
-
 .not(#formservicios)
 {
 	margin: 0;
@@ -74,7 +73,8 @@ header
 	border-radius: 5px;
 	color: white;
 	margin: 1em auto;
-	padding: .4em;
+	margin-bottom: 2em;
+	padding: .5em;
 	width: 95%;
 }
 
@@ -105,7 +105,18 @@ header h1 a
 
 header h1 a:hover
 {
+	border-radius: 5px;
 	color: lime;
+}
+
+#aceptar
+{
+	padding: .5em 1em;
+}
+
+#aceptar:hover
+{
+	cursor: pointer;
 }
 
 #admin
@@ -139,7 +150,7 @@ header h1 a:hover
 
 #cont-admin
 {
-	margin: .3em;
+	margin: .5em;
 	padding: .5em;
 	position: absolute;
 	top: 5em;
@@ -169,6 +180,11 @@ header h1 a:hover
 {
 	font-size: .9em;
 	padding: 1em;
+}
+
+#datagrid1
+{
+	margin-top: 1em;
 }
 
 #entrar
@@ -338,7 +354,7 @@ header h1 a:hover
 .bienvenido
 {
 	display: inline-block;
-	margin: 1em 1em 1em 5.5em;
+	margin: 1em 1em 2em 5.5em;
 	padding: .5em;
 	position: absolute;
 	top: 0;
@@ -436,8 +452,8 @@ header h1 a:hover
 .contenido
 {
 	height: 41em;
-	margin: .2em auto;
-	padding: .1em;
+	margin: .5em auto;
+	padding: .5em;
 	position: relative;
 	width: 97%;
 }
